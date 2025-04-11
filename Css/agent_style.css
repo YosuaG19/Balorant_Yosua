@@ -1,0 +1,115 @@
+.agent_section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.agent_cont{
+    background-image: linear-gradient(to top, #949494, rgba(255, 255, 255, 0));
+    position: relative;
+    display: flex;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    border-radius: 0 0 40px 40px;
+    padding: 1rem;
+    transition: .3s ease-in-out;
+}
+
+.agent_img{
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+}
+.agent_role{
+    z-index: 0;
+    width: 100px;
+    position: absolute;
+    bottom: -.5rem;
+    right: -1rem;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+.agent_name{
+    color: white;
+    font-family: Inter;
+    text-transform: uppercase;
+    font-size: 4rem;
+    text-align: center;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+.agent_cont:hover .agent_role{
+    opacity: 100;
+    transition: .3s ease-in-out;
+}
+.agent_cont:hover .agent_name{
+    opacity: 100;
+    transition: .3s ease-in-out;
+}
+
+#agent_1:hover{
+    background-image: linear-gradient(to top, #874669, #5E4452, rgba(255, 0, 0, 0));
+    transition: .5s ease-in-out;
+}
+
+#agent_2:hover{
+    background-image: linear-gradient(to top, #4C1F93, #4F3A67, rgba(255, 0, 0, 0));
+    transition: .5s ease-in-out;
+}
+
+#agent_3:hover{
+    background-image: linear-gradient(to top, #844687, #307BA1, rgba(255, 0, 0, 0));
+    transition: .5s ease-in-out;
+}
+
+#agent_4:hover{
+    background-image: linear-gradient(to top, #467587, #44545E, rgba(255, 0, 0, 0));
+    transition: .5s ease-in-out;
+}
+
+#agent_5:hover{
+    background-image: linear-gradient(to top, #800002, #6A3637, rgba(255, 0, 0, 0));
+    transition: .5s ease-in-out;
+}
+
+#agent_6:hover{
+    background-image: linear-gradient(to top, #000000, #3F3F3F, rgba(255, 0, 0, 0));
+    transition: .5s ease-in-out;
+}
+
+
+@media screen and (max-width : 834px) {
+    .agent_section{
+        grid-template-columns: 45% 45%;
+    }
+
+    .agent_img{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .agent_section{
+        grid-template-columns: 75%;
+    }
+
+    .agent_cont{
+        height: 340px;
+    }
+
+    .agent_img{
+        width: 85%;
+    }
+
+    .agent_name{
+        font-size: 3.75rem;
+        font-weight: 600;
+    }
+}

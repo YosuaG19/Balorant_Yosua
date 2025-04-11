@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.download_section{
+    width: 100%;
+    height: 60vh;
+    background-image: url(../Assests/Home/Bg_Banner.png);
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.banner_logo_img{
+    content: url(../Assests/Home/Logo\ Banner.png);
+    position: absolute;
+    width: 35%;
+    z-index: 0;
+}
+
+.banner_desc{
+    flex-direction: column;
+    gap: 0.2rem;
+    z-index: 1;
+    width: 100%;
+}
+
+.banner_logo_name{
+    content: url(../Assests/Judul\ Palorant.png);
+    filter: invert(1);
+}
+
+.button_play_now{
+    padding: 1rem 2rem 1rem 2rem;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-family: Inter;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+
+.news_part{
+    padding: 1.5rem;
+    flex-direction: column;
+}
+
+.news_section_title{
+    width: 100%;
+    font-family: Inter;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0rem 1rem 0rem;
+}
+
+.news_section_title h2{
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.news_section_title a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: .75rem;
+    gap: .25rem;
+}
+
+.news_section_title a:hover{
+    color: grey;
+}
+
+.visit_btn{
+    width: 10px;
+    color: #DC363B;
+}
+
+.news_part_section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 31.5% 31.5% 31.5%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+}
+
+.news{
+    width: 100%;
+    flex-direction: column;
+}
+
+.news img{
+    width: 100%;
+}
+
+.news_text{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding-top: .25rem;
+    font-family: Inter;
+}
+
+.news_text h3{
+    color: #DC363B;
+    font-size: .75rem;
+    font-weight: 700;
+}
+
+.news_text h2{
+    padding-top: .5rem;
+    font-size: 1.25rem;
+}
+
+.news_text p{
+    padding-top: 0.25rem;
+    font-size: .85rem;
+    font-weight: 500;
+}
+
+.best_agent_temp{
+    width: 100%;
+    height: 650px;
+    box-sizing: content-box;
+}
+
+.best_agent_temp img{
+    content: url(../Assests/Home/Best_Agent_Banner.png);
+    width: 100%;
+    height: 100%;
+}
+
+.Home_to_Map{
+    padding: 2.5rem;
+}
+
+.Home_to_Map div{
+    width: 50%;
+}
+
+.Home_to_Map div img{
+    width: 100%;
+}
+
+.HTM_text{
+    font-family: Inter;
+    flex-direction: column;
+    text-align: left;
+    justify-content: start;
+    align-items: start;
+    gap: 0.75rem;
+}
+
+.HTM_text h2{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+
+.HTM_text p{
+    width: 80%;
+    margin-left: .75rem;
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+.HTM_text a{
+    margin-left: .75rem;
+    padding: .75rem 2rem .75rem 2rem;
+    width: fit-content;
+    background: #DC363B;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+@media screen and (max-width : 1000px) {
+    .download_section{
+        height: 30vh;
+        background-size: cover;
+    }
+
+    .banner_logo_img{
+        width: 50%;
+    }
+
+    .banner_logo_name{
+        width: 60%;
+    }
+
+    .news_part_section{
+        grid-template-columns: 50% 50% 50%;
+        overflow-x: scroll;
+        justify-content: start;
+    }
+
+    .best_agent_temp{
+        width: 100%;
+        height: 400px;
+        box-sizing: content-box;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .download_section{
+        height: 30vh;
+        background-size: cover;
+    }
+
+    .banner_logo_img{
+        width: 60%;
+    }
+
+    .banner_logo_name{
+        width: 70%;
+    }
+
+    .button_play_now{
+        font-size: 1rem;
+        padding: .65rem 1.65rem .65rem 1.65rem;
+    }
+
+    .news_part_section{
+        grid-template-columns: 100% 100% 100%;
+        overflow-x: scroll;
+        justify-content: start;
+    }
+    ::-webkit-scrollbar{
+        width: 2px;
+        scroll-behavior: smooth;
+        scroll-snap-type: mandatory;
+    }
+
+    .Home_to_Map{
+        padding: 1.5rem;
+        flex-direction: column;
+    }
+    .Home_to_Map div{
+        width: 100%;
+    }
+
+    .HTM_text p{
+        width: 90%;
+    }
+
+    .best_agent_temp{
+        width: 100%;
+        height: 450px;
+        box-sizing: content-box;
+    }
+    
+    .best_agent_temp img{
+        content: url(../Assests/Home/Best_Agent_Banner\(Small\).png);
+        width: 100%;
+        height: 100%;
+    }
+}
