@@ -1,0 +1,116 @@
+.report_section{
+    flex-direction: column;
+    width: 50%;
+    height: 700px;
+    justify-self: center;
+    box-shadow: 0 0 .75rem rgba(0, 0, 0, 50%);
+}
+
+.info{
+    position: relative;
+    background-color: black;
+    height: 30%;
+    width: 100%;
+}
+
+.info_text{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    gap: .5rem;
+}
+
+.info_text h2{
+    font-size: 2rem;
+}
+
+.info_text p{
+    font-size: .75rem;
+}
+
+.info_logo{
+    position: absolute;
+    filter: opacity(50%);
+    width: 25%;
+}
+
+.info_mark{
+    position: absolute;
+    filter: invert(1);
+    width: 15%;
+    bottom: 5%;
+    right: 2%;
+}
+
+.fill{
+    padding-top: 1rem;
+    height: 70%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.form_input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2.5px;
+}
+
+.form_input label{
+    width: 100%;
+}
+
+.form_input .input{
+    padding: 7px;
+    width: 100%;
+    height: 35px;
+    border-radius: 4px;
+    border: 2px gray solid;
+}
+
+.form_input small{
+    width: 100%;
+    visibility: hidden;
+    color: #CA2828;
+    font-size: .75rem;
+}
+
+.error .input{
+    border: 2px #CA2828 solid;
+    /* box-shadow: 0px 0px 3px #CA2828 inset; */
+}
+
+.error small{
+    visibility: visible;
+    color: #CA2828;
+}
+
+.success .input{
+    border: 2px #139827 solid;
+    /* box-shadow: 0px 0px 3px #139827 inset; */
+}
+
+
+.form_submit{
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.form_submit input{
+    padding: .75rem 2.5rem .75rem 2.5rem;
+    background-color: #CA2828;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: .3s ease;
+}
+
+.form_submit input:hover{
+    background-color: white;
+    color: #CA2828;
+    border: 1px black solid;
+}

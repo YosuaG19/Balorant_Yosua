@@ -1,5 +1,4 @@
 @font-face {
-    font-family: Inter;
     src: url(../Inter/Inter-VariableFont_opsz\,wght.ttf);
 }
 
@@ -32,13 +31,11 @@ section h1 img{
 }
 
 section p{
-    font-family: Inter;
     font-weight: 200;
     color: rgb(81, 81, 81);
 }
 
 section a{
-    font-family: Inter;
     padding: .75rem 3.5rem .75rem 3.5rem;
     width: fit-content;
     background: #DC363B;

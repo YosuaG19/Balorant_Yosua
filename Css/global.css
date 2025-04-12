@@ -21,6 +21,7 @@
 
 *{
     box-sizing: border-box;
+    font-family: Inter;
 }
 
 .slide{
@@ -101,7 +102,6 @@ nav{
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 400;
-    font-family: Inter;
     cursor: pointer;
     position: relative;
 }
@@ -166,7 +166,6 @@ footer{
 .footer_2 p{
     font-size: .75rem;
     text-align: center  ;
-    font-family: Inter;
     opacity: 40%;
     color: white;
 }

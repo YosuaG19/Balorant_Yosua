@@ -2,159 +2,180 @@ body{
     min-height: 100vh;
 }
 
-.report_section{
-    width: 87.5%;
-    justify-self: center;
-    align-self: center;
-    margin-top: 1.5rem;
-    overflow: hidden;
-    height: 400px;
-    box-shadow: 0px 0px 50px rgb(50, 50, 50);
-} 
-
-
-.info_text{
-    position: absolute;
-    color: white;
-    width: 90%;
-    text-align: center;
-    font-family: Inter;
-    font-size: .75rem;
-    font-weight: 200;
+small{
+    display: inline-block;
+    visibility: hidden;
 }
 
-.info_text h2{
-    padding-bottom: .5rem;
-    font-size: 2rem;
+.report_section{
+    position: relative;
+    margin: 5rem 0 3rem 0;
+    flex-direction: column;
+    width: 50%;
+    height: 675px;
+    justify-self: center;
+    box-shadow: 0 0 .75rem rgba(0, 0, 0, 50%);
+    background-color: white;
 }
 
 .info{
     position: relative;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 30%;
-    background-color: rgb(0, 0, 0);
-}
-
-.info_logo{
-    width: 75%;
-    filter: opacity(20%);
-    z-index: 1;
-}
-
-
-.info_mark{
-    width: 80%;
-    filter: invert(1);
-    position: absolute;
-    bottom: 5%;
-}
-
-.fill{
-    height: 100%;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: whitesmoke;
-}
-
-.form_upper{
-    height: 70%;
-    width: 100%;
-}
-
-.form_side{
-    flex-direction: column;
-    width: 100%;
-    padding-left: 1rem;
-}
-
-.form_side span{
-    margin: 10px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.form_side label{
-    font-family: Inter;
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.form_lower{
-    height: 30%;
-    width: 100%;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.input{
-    width: 90%;
-    height: 35px;
-    padding: .2rem;
-    border: none;
-    box-shadow: 0px 0px 3px gray inset;
-}
-
-.input_T_area{
-    width: 90%;
-    height: 70px;
-    cursor: pointer;
-    letter-spacing: 1px;
-    padding: .3rem;
-    border: none;
-    box-shadow: 0px 0px 3px gray inset;
-    font-family: Inter;
-    font-weight: 600;
-}
-
-.btn_submit{
-    width: 200px;
-    height: 40px;
-    border: none;
     background-color: #CA2828;
-    color: white;
-    cursor: pointer;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    font-family: Inter;
-    font-weight: 600;
+    height: 25%;
+    width: 100%;
 }
 
-.check_email{
+.info_text{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
     gap: .5rem;
 }
 
-.check_email label{
-    font-family: Inter;
-    font-size: .75rem;
-    text-transform: uppercase;
-    font-weight: 650;
+.info_text h2{
+    font-size: 2rem;
 }
 
-.check_email input:checked{
+.info_text p{
+    font-size: .75rem;
+}
+
+.info_logo{
+    position: absolute;
+    filter: opacity(50%);
+    width: 25%;
+}
+
+.info_mark{
+    position: absolute;
+    filter: invert(1);
+    width: 15%;
+    bottom: 5%;
+    right: 2%;
+}
+
+.fill{
+    padding-top: 1rem;
+    height: 75%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+}
+
+.form_input{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2.5px;
+}
+
+.form_input label{
+    width: 100%;
+}
+
+.form_input .input{
+    padding: 7px;
+    width: 100%;
+    height: 35px;
+    border-radius: 4px;
+    border: 2px gray solid;
+}
+
+.form_input small{
+    width: 100%;
+    visibility: hidden;
+    color: #CA2828;
+    font-size: .75rem;
+}
+
+.error .input{
+    border: 2px #CA2828 solid;
+}
+
+.error small{
+    visibility: visible;
     color: #CA2828;
 }
 
-.input_text{
-    cursor: pointer;
-    letter-spacing: 1px;
-    font-family: Inter;
-    padding-left: .5rem;
-    font-weight: 650;
+.form_submit{
+    margin-top: .25rem;
+    flex-direction: column;
+    gap: .5rem;
 }
 
-select{
-    cursor: pointer;
-    letter-spacing: 1px;
-    font-family: Inter;
-    font-weight: 650;
+.form_submit input{
+    padding: .75rem 2.5rem .75rem 2.5rem;
+    background-color: #CA2828;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: .3s ease;
 }
 
+.form_submit input:hover{
+    background-color: white;
+    color: #CA2828;
+    box-shadow: 0 0 2px black inset;
+}
+
+/* pop up */
+
+.popup{
+    background-color: white;
+    box-shadow: 0 0 .75rem black;
+    position: absolute;
+    border-radius: 10px;
+    width: 40%;
+    height: 15%;
+    overflow: hidden;
+}
+
+.popup p{
+    text-transform: uppercase;
+    z-index: 1;
+    font-weight: 600;
+}
+
+.popup img{
+    position: absolute;
+    filter: invert(1) opacity(10%);
+    z-index: 0;
+    width: 35%;
+}
+
+.close{
+    position: absolute;
+    top: 15%;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.close span{
+    height: 3px;
+    border-radius: 2px;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+}
+
+.close span:nth-child(1){
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.close span:nth-child(2){
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.no_active{
+    visibility: hidden;
+}
 
 @media screen and (max-width: 1000px){
     body{
@@ -168,32 +189,10 @@ select{
 
     .report_section{
         flex-direction: column;
-        width: 95%;
-        justify-self: center;
+        width: 75%;
         gap: 2rem;
-        height: 500px;
-        margin: 1rem 1rem 0 1rem;
-    }
-
-    .info{
-        width: 100%;
-        height: 50%;
-        overflow: hidden;
-    }
-
-    .fill{
-        width: 95%;
-    }
-
-    .info_mark{
-        width: 125px;
-        right: 1%;
-    }
-    .info_logo{
-        width: 80%;
-    }
-    .info_text h2{
-        font-weight: 550;
+        height: 700px;
+        margin: 3rem 0 2rem 0;
     }
 
 }
@@ -204,6 +203,7 @@ select{
     }
     .report_section{
         height: 700px;
+        width: 90%;
     }
     .info{
         height: 25%;
@@ -224,13 +224,10 @@ select{
     .info_text h2{
         font-size: 1.25rem;
     }
-    .form_upper{
-        flex-direction: column;
+    .popup{
+        width: 70%;
     }
-
-    .form_side label{
-        font-size: 1rem;
-        font-weight: 650;
+    .popup img{
+        width: 40%;
     }
-
 }

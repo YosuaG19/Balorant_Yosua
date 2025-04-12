@@ -1,37 +1,78 @@
-let form = document.getElementById("report_form");
+let form = document.querySelector(".fill");
+let popup = document.querySelector(".popup");
+let username = document.getElementById("name");
+let email = document.getElementById("email");
+let server = document.getElementById("server");
+let problem = document.getElementById("problem");
+let desc = document.getElementById("description");
+let closing = document.getElementById("close");
 
-form.addEventListener ('submit', function(event){
-    event.preventDefault();
+let valid = false;
 
-    let username = document.getElementById("username");
-    let email = document.getElementById("email");
-    let problem = document.getElementById("problem");
-    let description = document.getElementById("description");
+closing.addEventListener('click', () => {
+    popup.classList.add("no_active");
+});
 
-    if (username.value == ""){
-        alert("Please fill your username");
-        return;
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    valid = checkInputs();
+
+    if (valid) {
+        popup.classList.remove("no_active");
+        form.reset();
     }
+});
 
-    if (email.value == ""){
-        alert("Please fill your email");
-        return;
-    }
+function checkInputs() {
+    clearErrors();
 
-    if (problem.value == "-"){
-        alert("Please choose your problem");
-        return;
-    }
+    let name_t = false;
+    let email_t = false;
+    let server_t = false;
+    let problem_t = false;
+    let desc_t = false;
 
-    if (!email.value.endsWith("@gmail.com")){
-        alert("Email must end with @gmail.com");
-        return;
-    }
+    if (username.value.trim() === "") {
+        error(username, "Username cannot be blank");
+    } else name_t = true;
 
-    if (description.value == ""){
-        alert("Please fill a brief description of your problem for better understanding");
-        return;
-    }
+    if (email.value.trim() === "") {
+        error(email, "Email mustn't be blank");
+    } else if (!email.value.trim().endsWith("@palorant.com")) {
+        error(email, "Email must end with @palorant.com");
+    } else email_t = true;
 
-    alert("Register Success");
-})
+    if (server.value.trim() === "-") {
+        error(server, "Please choose your account server");
+    } else server_t = true;
+
+    if (problem.value.trim() === "-") {
+        error(problem, "Please choose your problem");
+    } else problem_t = true;
+
+    if (desc.value.trim() === "") {
+        error(desc, "Please fill some information");
+    } else desc_t = true;
+
+    return name_t && email_t && server_t && problem_t && desc_t;
+}
+
+function error(input, message) {
+    let form_input = input.parentElement;
+    let small = form_input.querySelector("small");
+
+    small.innerText = message;
+    form_input.classList.add("error");
+}
+
+function clearErrors() {
+    let inputs = document.querySelectorAll(".form_input");
+    inputs.forEach(input => {
+        input.classList.remove("error");
+        let small = input.querySelector("small");
+        if (small) small.innerText = "";
+    });
+}
+
+console.log("report.js loaded ✅");
