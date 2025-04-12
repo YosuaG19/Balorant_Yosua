@@ -25,7 +25,7 @@ form.addEventListener('submit', (e) => {
 });
 
 function checkInputs() {
-    clearErrors();
+    // clearErrors();
 
     let name_t = false;
     let email_t = false;
@@ -35,25 +35,40 @@ function checkInputs() {
 
     if (username.value.trim() === "") {
         error(username, "Username cannot be blank");
-    } else name_t = true;
+    } else {
+        name_t = true;
+        clearErrors(username);
+    }
 
     if (email.value.trim() === "") {
         error(email, "Email mustn't be blank");
     } else if (!email.value.trim().endsWith("@palorant.com")) {
         error(email, "Email must end with @palorant.com");
-    } else email_t = true;
+    } else {
+        email_t = true;
+        clearErrors(email);
+    }
 
     if (server.value.trim() === "-") {
         error(server, "Please choose your account server");
-    } else server_t = true;
+    } else {
+        server_t = true;
+        clearErrors(server);
+    }
 
     if (problem.value.trim() === "-") {
         error(problem, "Please choose your problem");
-    } else problem_t = true;
+    } else {
+        problem_t = true;
+        clearErrors(problem);
+    }
 
     if (desc.value.trim() === "") {
         error(desc, "Please fill some information");
-    } else desc_t = true;
+    } else {
+        desc_t = true;
+        clearErrors(desc);
+    }
 
     return name_t && email_t && server_t && problem_t && desc_t;
 }
@@ -66,13 +81,9 @@ function error(input, message) {
     form_input.classList.add("error");
 }
 
-function clearErrors() {
-    let inputs = document.querySelectorAll(".form_input");
-    inputs.forEach(input => {
-        input.classList.remove("error");
-        let small = input.querySelector("small");
-        if (small) small.innerText = "";
-    });
+function clearErrors(input) {
+    let form_input = input.parentElement;
+    form_input.classList.remove("error");
 }
 
 console.log("report.js loaded ✅");
