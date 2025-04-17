@@ -43,5 +43,12 @@ section a{
     text-decoration: none;
     color: white;
     text-transform: uppercase;
+    transition: .3s ease;
     font-weight: 500;
+}
+
+section a:hover{
+    /* background-color: white;
+    color: #DC363B; */
+    box-shadow: 0 0 .25rem black;
 }

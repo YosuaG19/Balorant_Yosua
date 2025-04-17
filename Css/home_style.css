@@ -6,7 +6,7 @@
 .download_section{
     width: 100%;
     height: 60vh;
-    background-image: linear-gradient(to top, #874669, #5E4452 , rgb(0, 0, 0));
+    background-image: linear-gradient(to top, #3b383a, #2a2a2a , rgb(0, 0, 0));
     background-size: contain;
     background-position: center;
     position: relative;
@@ -21,14 +21,6 @@
     position: absolute;
     width: 35%;
     z-index: 0;
-}
-
-.banner_best_agent{
-    content: url(../Assests/Agent/Cloak.png);
-    position: absolute;
-    width: 35%;
-    left: -5%;
-    bottom: -25%;
 }
 
 .banner_desc{
@@ -56,8 +48,10 @@
 .button_play_now:hover{
     color: black;
     background-color: white;
-    box-shadow: 0 0 .5rem black;
+    box-shadow: 0 0 2px black inset;
 }
+
+/* news */
 
 .news_part{
     padding: 1.5rem;
@@ -144,6 +138,106 @@
     margin-top: 1rem;
 }
 
+/* Best Agent Banner */
+
+.best_agent_section{
+    width: 100%;
+    background-color: black;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    position: relative;
+}
+
+.best_agent_bg_img{
+    position: absolute;
+    width: 60%;
+    margin-right: 10rem;
+    z-index: 0;
+    top: 0;
+}
+
+.opacity_filter{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.best_agent_section div{
+    height: 100%;
+    width: 40%;
+    z-index: 3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.best_agent_img img{
+    position: absolute;
+}
+
+.best_agent_img{
+    flex-direction: row;
+}
+
+.best_agent_img img{
+    height: 125%;
+    width: auto;
+}
+
+.best_agent_name{
+    position: absolute;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    text-transform: uppercase;
+    font-size: 4rem;
+    right: 30%;
+    bottom: 5%;
+}
+
+
+.best_agent_info{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-transform: uppercase;
+    font-size: .75rem;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    padding: 1.5rem .5rem;
+}
+
+.chart{
+    height: 35%;
+}
+
+.win_rate{
+    height: 35%;
+}
+
+.top_info{
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+}
+
+.top_info span{
+    width: 50%;
+    gap: .25rem;
+    flex-direction: column;
+}
+
 .Home_to_Map{
     padding: 2.5rem;
 }
@@ -192,19 +286,14 @@
 .HTM_text a:hover{
     background-color: white;
     color: #CA2828;
-    box-shadow: 0 0 .5rem black;
+    /* box-shadow: 0 0 .5rem black; */
+    box-shadow: 0 0 2px black inset;
 }
 
 @media screen and (max-width : 1000px) {
     .download_section{
         height: 30vh;
         background-size: cover;
-    }
-
-    .banner_best_agent{
-        width: 40%;
-        left: -10%;
-        bottom: -10%;
     }
 
     .banner_logo_img{
@@ -221,10 +310,26 @@
         justify-content: start;
     }
 
-    .best_agent_temp{
-        width: 100%;
-        height: 400px;
-        box-sizing: content-box;
+    .best_agent_name{
+        font-size: 2.5rem;
+    }
+
+    .best_agent_bg_img{
+        height: 175%;
+        top: 0;
+    }
+
+    .best_agent_section{
+        align-items: end;
+        height: 40vh;
+    }
+
+    .best_agent_info{
+        height: 80%;
+    }
+
+    .best_agent_name{
+        font-size: 4rem;
     }
 }
 
@@ -264,6 +369,40 @@
         scroll-snap-type: mandatory;
     }
 
+    .best_agent_bg_img{
+        height: 150%;
+        width: auto;
+        top: 0;
+        left: -50%;
+    }
+
+    .best_agent_section{
+        align-items: end;
+        height: 70vh;
+    }
+
+    .best_agent_section div{
+        height: 80%;
+        width: 45%;
+    }
+
+    .best_agent_info{
+        height: 80%;
+    }
+
+    .chart{
+        height: 30%;
+    }
+
+    .best_agent_name{
+        top: 7.5%;
+        font-size: 3rem;
+    }
+
+    .top_info{
+        gap: 1rem;
+    }
+
     .Home_to_Map{
         padding: 1.5rem;
         flex-direction: column;
@@ -274,17 +413,5 @@
 
     .HTM_text p{
         width: 90%;
-    }
-
-    .best_agent_temp{
-        width: 100%;
-        height: 450px;
-        box-sizing: content-box;
-    }
-    
-    .best_agent_temp img{
-        content: url(../Assests/Home/Best_Agent_Banner\(Small\).png);
-        width: 100%;
-        height: 100%;
     }
 }
