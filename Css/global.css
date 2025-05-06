@@ -44,7 +44,7 @@
 }
 
 body{
-    padding-top: 10vh;
+    margin-top: 10vh;
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
@@ -194,7 +194,7 @@ footer{
     background-image: url(../Assests/Banner_Title.svg);
     background-size: cover;
     position: absolute;
-    top: 10vh;
+    top: 0;
     z-index: -1;
 }
 

@@ -12,7 +12,7 @@ small{
 
 .report_section{
     position: relative;
-    margin: 5rem 0 3rem 0;
+    margin: 20vh 0 3rem 0;
     flex-direction: column;
     width: 50%;
     height: 675px;
@@ -178,6 +178,16 @@ small{
 
 .no_active{
     visibility: hidden;
+}
+
+.checkbox{
+    justify-content: center;
+    gap: 5px;
+}
+
+#follow_up{
+    padding: 0;
+    max-width: 20px;
 }
 
 @media screen and (max-width: 1000px){
